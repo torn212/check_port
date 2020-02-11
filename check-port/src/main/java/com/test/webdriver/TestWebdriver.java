@@ -1,7 +1,6 @@
 package com.test.webdriver;
 
 import com.test.webdriver.vo.ExcelVo;
-import org.apache.poi.hssf.record.DVALRecord;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,20 +11,12 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 public class TestWebdriver {
 
-    static List<WebDriver> list = new LinkedList<>();
 
     public static void main(String startTime, String endTime) throws Exception {
-        for (int i = 0; i < 20; i++) {
-            FirefoxOptions options = new FirefoxOptions();
-            WebDriver dr = new FirefoxDriver(options);
-            list.add(dr);
-        }
-
         ExecutorService executorService = Executors.newFixedThreadPool(5);
 
         System.out.println("start=====================" + System.currentTimeMillis());
